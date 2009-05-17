@@ -1,0 +1,24 @@
+Welcome to WakeSmart PR Monitor
+A very simple customer acquisition and monitoring tool for WakeSmart.
+Use twitter to monitor for certain keywords, ie "sleeping problems", you can then friend them or reply to them and introduce them
+to WakeSmart.
+Written by <a href="http://github.com/jtoy">Jason Toy</a>
+
+%form
+  Keywords:
+  %input{:type=>"text", :value => @keywords}
+  %input{:type => "submit"}
+  
+
+#actions
+  Click on a checkbox for a user if you want to run an action on them or 
+  %input{:type=> "button", :value => "select all"}
+  
+.results
+  - @results.each do |r|
+    #result
+      %a#name{:href=> "http://twitter.com/#{r.from_user}"}
+        = r.from_user
+      #text= r.text
+      %a{:href=> "http://twitter.com/#{r.from_user}/status/#{r.id}"}link
+      %img{:src=> r.profile_image_url, :height=> 73, :width => 73}
