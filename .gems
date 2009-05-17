@@ -1,4 +1,4 @@
-will_paginate --source gems.github.com
+mislav-will_paginate --source gems.github.com
 twitter 
-factory_girl --source gems.github.com
-shoulda  --source gems.github.com
+thoughtbot-factory_girl --source gems.github.com
+thoughtbot-shoulda  --source gems.github.com
