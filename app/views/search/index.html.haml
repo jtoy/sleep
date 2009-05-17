@@ -14,11 +14,11 @@ Written by <a href="http://github.com/jtoy">Jason Toy</a>
   Click on a checkbox for a user if you want to run an action on them or 
   %input{:type=> "button", :value => "select all"}
   
-.results
+#results
   - @results.each do |r|
-    #result
+    .result
       %a#name{:href=> "http://twitter.com/#{r.from_user}"}
         = r.from_user
-      #text= r.text
+      .text= r.text
       %a{:href=> "http://twitter.com/#{r.from_user}/status/#{r.id}"}link
       %img{:src=> r.profile_image_url, :height=> 73, :width => 73}
