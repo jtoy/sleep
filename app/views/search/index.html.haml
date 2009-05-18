@@ -3,17 +3,17 @@
   - @results.each do |r|
     .result
       %a{:href=> "http://twitter.com/#{r.from_user}"}
-        %img{:src=> r.profile_image_url, :height=> 48, :width => 48}
-      %a#name{:href=> "http://twitter.com/#{r.from_user}"}
-        = r.from_user
-      == : #{r.text}
-      %div
-        
-        = time_ago_in_words r.created_at
-        ago&nbsp|
-        %a{:href=> "http://twitter.com/#{r.from_user}/status/#{r.id}"}View Tweet
-        &nbsp|
-        %a{:href=> "http://twitter.com/?status=@#{r.from_user}%20&in_reply_to_status_id=#{r.id}&in_reply_to=#{r.from_user}"}Reply
+        %img.pic{:src=> r.profile_image_url, :height=> 48, :width => 48}
+      .data
+        %a#name{:href=> "http://twitter.com/#{r.from_user}"}
+          = r.from_user
+        == : #{r.text}
+        %div
+          = time_ago_in_words r.created_at
+          ago&nbsp|
+          %a{:href=> "http://twitter.com/#{r.from_user}/status/#{r.id}"}View Tweet
+          &nbsp|
+          %a{:href=> "http://twitter.com/?status=@#{r.from_user}%20&in_reply_to_status_id=#{r.id}&in_reply_to=#{r.from_user}"}Reply
       
 %input.toggle{:type=>"button",:value =>"Update search query", :toggletarget=>"#update_keywords"}
 #update_keywords.hidden

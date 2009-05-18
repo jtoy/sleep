@@ -12,5 +12,14 @@ body {
 
 .result{
   background-color: white;
+  padding: 15px 0 0 0 ;
   margin: 15px;
+}
+.data {
+  padding: 0 0 0 15px;
+}
+
+.result img {
+  margin: 0 0 0 15px;
+  border:0 none;
 }
