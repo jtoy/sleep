@@ -43,3 +43,5 @@ Rails::Initializer.run do |config|
   # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}')]
   # config.i18n.default_locale = :de
 end
+KEYWORDS = %w[sleep OR sleeping OR melatonin problem].join(" ") #default keywords
+Rails.cache.write "keywords", KEYWORDS

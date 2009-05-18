@@ -1,0 +1,16 @@
+body {
+  background:#9AE4E8 url(http://assets2.twitter.com/images/bg.gif) no-repeat fixed left top;
+}
+
+#results {
+  background-color: #EEEEEE;
+}
+#main {
+  padding:0px 150px 0px 150px;
+  margin-bottom:15px;
+}
+
+.result{
+  background-color: white;
+  margin: 15px;
+}

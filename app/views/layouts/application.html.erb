@@ -2,14 +2,18 @@
 <html>
   <head>
     <title>WakeSmart PR Twitter Monitor</title>
+    <%= stylesheet_link_tag "application" %>
     <script type="text/javascript" src="http://www.google.com/jsapi"></script>
     <script type="text/javascript">
       google.load("jquery", "1.3");
     </script>
+    <%= javascript_include_tag "application"%>
   </head>
   <img src="/images/WakesmartLogo.jpg" />
-  <h1>WakeSmart PR</h1>
-  
-  <%= yield %>
+  <h1>Monitor and Acquire potential customers on twitter</h1>
+  <h2>Written by <a href="http://github.com/jtoy">Jason Toy</a></h2>
+  <div id="main">
+    <%= yield %>
+  </div>
   
 </html>

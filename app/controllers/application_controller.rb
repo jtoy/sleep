@@ -4,7 +4,12 @@
 class ApplicationController < ActionController::Base
   helper :all # include all helpers, all the time
   protect_from_forgery # See ActionController::RequestForgeryProtection for details
-
+  before_filter :xhr_to_js
   # Scrub sensitive parameters from your log
   # filter_parameter_logging :password
+  
+  #for jquery
+  def xhr_to_js
+    request.format = :js if request.xhr?
+  end
 end
